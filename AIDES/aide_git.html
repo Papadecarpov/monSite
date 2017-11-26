@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Liens</title>
+     <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+      <fieldset class="YC_fieldset" style="display:inline-block;vertical-align:top"> 
+          <legend>Aide sur Git</legend>
+          <p>Définir son nom et email :<br>
+                <i>git config --global user.name "Votre nom ou pseudo"</i><br>
+                <i>git config --global user.email "votre@email.com"</i></p>
+          <p>Pour activer un dossier comme repository Git, se placer dans ce dossier puis :<br>
+          <i>git init</i></p>
+          <p>Pour ajouter à l'index Git un fichier nouvellement créé :<br>
+          <i>git add checklist-vacances.md</i></p>
+          <p>Pour ajouter tous les fichiers du répertoire courant :<br>
+          <i>git add .</i></p>
+          <p>Après une modification du projet :<br>
+          <i>git commit -m "message pour commenter le commit"</i></p>
+          <p>Pour mettre à jour tous les fichers déjà présents dans l'index :<br>
+          <i>git commit -a -m "message pour commenter le commit"</i></p>
+          <p>Pour afficher l'historique des commit :<br>
+          <i>git log</i></p>
+          <p>Pour se positionner sur un commit :<br>
+          <i>git checkout SHADuCommit</i></p>
+          <p>Pour se positionner sur le dernier commit :<br>
+          <i>git checkout master</i></p>
+      </fieldset>
+    <fieldset class="YC_fieldset" style="display:inline-block;vertical-align:top"> 
+          <legend>Aide sur GitHub</legend>
+          <p>Pour récupérer un repository sur sa machine, ce positionner sur le répertoire de réception et :<br>
+          <i>git clone lienhttpsfournipargithub</i></p>
+          <p>Pour créer un repository sur gitHub, cliquer sur le bouton "Create new" ou "+" du site<br>
+          Pour synchroniser le repository local et celui de GitHub, se placer sur le répertoire local et :<br>
+          <i>git push origin master</i></p>
+          <p>Inversement, pour récupérer les modifications effectuées sur GitHub sur sa machine locale :<br>
+          <i>git pull origin master</i></p>
+      </fieldset>
+</body>
+</html>
+ 
