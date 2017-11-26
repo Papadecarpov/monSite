@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Websanova Color Picker</title>
+    <link rel="Stylesheet" type="text/css" href="../css/wColorPicker.min.css" />
+  </head>
+  <body>
+    <div id="wcp1">
+      <input id="wcp-input" type="text"/><br />
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/wColorPicker.min.js"></script>
+    <script>
+      $(function() {
+        $("#wcp1").wColorPicker({
+            initColor: '#ccf',
+            onSelect: function(color){
+              $('body').css('background', color);
+            },
+            onMouseover: function(color){
+              $('#wcp-input').css('background', color).val(color);
+            }
+        });
+      });
+    </script>
+  </body>
+</html>

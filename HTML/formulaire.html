@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Formulaire</title>
+     <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <form method="post" action="traitement.php">   
+    <div class="enligne">
+    <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">Saisie diverse</legend> 
+          <div class="conteneur">
+          <p class="element">
+          <label for ="texte" class="label">Zone texte :</label><br />     
+          <label for ="mdp" class="label">Mot de passe :</label><br />
+          <label for ="textarea" class="label">Zone multi lignes :</label><br />
+          </p>
+          <p class="element">
+           <input type="text" name="texte" id="texte"  placeholder="Saisir quelque chose ici" autofocus/><br />
+           <input type="password" name="mdp" id="mdp" /><br />
+           <textarea name="textarea" id="texterea" rows="5" cols="40"></textarea><br />
+          </p>
+          </div>
+          </fieldset>
+      <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">Saisie obligatoire</legend>    
+          <div class="conteneur">
+          <p class="element">
+          <label for ="email">Email :</label><br />
+          <label for ="url">Url :</label><br />
+          <label for ="tel">Tél :</label><br />
+          </p>
+          <p class="element">
+           <input type="email" name="email" id="email"  maxlength="60" size="60" required/><br />
+               <input type="url" name="url" id="url" required/><br />
+               <input type="tel" name="tel" id="tel" required/><br />
+          </p>
+          </div>
+          </fieldset>
+      </div>
+       <div class="enligne">
+    <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">Saisie diverse</legend> 
+          <div class="conteneur">
+          <p class="element">
+          <label for ="nombre">Nombre :</label><br />     
+          <label for ="curseur">Nombre :</label><br />
+          <label for ="couleur">Couleur :</label><br />
+          </p>
+          <p class="element">
+           <input type="number" name="nombre" id="nombre" min=0 max=100 /><br />
+           <input type="range" name="curseur" id="curseur" min=0 max=100 /><br />
+           <input type="color" name="couleur" id="couleur" /><br />
+          </p>
+          </div>
+          </fieldset>
+      <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">Saisie diverse</legend>    
+          <div class="conteneur">
+          <p class="element">
+          <label for ="date">Date :</label><br />
+          <label for ="heure">Heure :</label><br />
+          <label for ="semaine">Semaine :</label><br />
+          <label for ="mois">Mois :</label><br />
+          <label for ="date_heure">Date/Heure :</label><br />
+          </p>
+          <p class="element">
+           <input type="date" name="date" id="date" /><br />
+               <input type="time" name="heure" id="heure" /><br />
+               <input type="week" name="semaine" id="semaine" /><br />
+              <input type="month" name="mois" id="mois" /><br />
+               <input type="datetime" name="date_heure" id="date_heure" /><br />
+          </p>
+          </div>
+          </fieldset>
+     <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">Saisie diverse</legend>    
+          <div class="conteneur">
+          <p class="element">
+          <label for ="recherche">Recherche :</label><br />
+          <label for ="choix">Cochez les bonnes cases :</label><br /><br /><br /><br />
+          <label for ="radio">Veuillez choisir votre tranche d'age :</label><br /><br /><br /><br />
+         <label for="pays">Dans quel pays habitez-vous ?</label><br />     
+          </p>
+          <p class="element">
+           <input type="search" name="recherche" id="recherche" /><br />
+               <input type="checkbox" name="choix1" id="choix1" /><label for ="choix1">Choix 1</label><br />
+                <input type="checkbox" name="choix2" id="choix2" /><label for ="choix2">Choix 2</label><br />
+                 <input type="checkbox" name="choix3" id="choix3" /><label for ="choix3">Choix 3</label><br />
+                    <input type="checkbox" name="choix4" id="choix4" checked/><label for ="choix4">Choix 4</label><br />
+              <input type="radio" name="age" id="tr1" /><label for ="tr1">0-20 ans</label><br />
+                <input type="radio" name="age" id="tr2" /><label for ="tr2">20-40 ans</label><br />
+                 <input type="radio" name="age" id="tr3" /><label for ="tr3">40-60 ans</label><br />
+                    <input type="radio" name="age" id="tr4" checked/><label for ="tr4">60 ans et plus</label><br />
+              
+                <select name="pays" id="pays">           
+                    <option value="france">France</option>           
+                    <option value="espagne">Espagne</option>           
+                    <option value="italie">Italie</option>           
+                    <option value="royaume-uni">Royaume-Uni</option>           
+                    <option value="canada" selected>Canada</option>           
+                    <option value="etats-unis">États-Unis</option>           
+                     <optgroup label="Asie">              
+                         <option value="chine">Chine</option>               
+                         <option value="japon">Japon</option>           
+                    </optgroup> 
+              </select> 
+          </p>
+          </div>
+          </fieldset>
+      </div>
+      
+      <input class="btn-info" type="submit" value="Envoyer" />
+      <input class="btn-info" type="reset" value="Annuler" />
+      <button class="btn-info" >A définir</button>
+      <img src="../images/ok.png" alt="a definir" height="40px" width="50px" />
+      <fieldset class="YC_fieldset"> 
+      <a href="http://www.openclassrooms.com">Site des cours</a>
+      </fieldset>
+    </form> 
+</body>
+</html>
+ 

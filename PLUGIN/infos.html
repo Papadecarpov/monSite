@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infos</title>
+    <meta charset="utf-8" />
+      <link href="../css/FeedEk.css" rel="stylesheet" type="text/css" />
+      <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+
+      <div class='infos' id="test_RSS"></div>
+      <p class="infos"><a href="http://www.lemonde.fr/rss">Le monde</a></p>
+      <div class='infos' id="test_RSS2"></div>
+      <p class="infos"><a href="http://www.france24.com/fr/rss">France 24</a></p>
+
+      <script src="../js/jquery.js"></script>
+      <script src="../js/FeedEk.js"></script>
+      <script>
+      $(function () {
+          infos();
+      function infos() {
+        $('#test_RSS').FeedEk({
+            FeedUrl: 'http://www.lemonde.fr/rss/une.xml',
+            MaxCount: 1
+            });
+        $('#test_RSS2').FeedEk({
+            FeedUrl: 'http://www.france24.com/fr/sports/rss',
+            MaxCount: 1
+            });
+           }
+    
+       setInterval(infos, 60000); 
+     });
+</script>
+  </body>
+    
+</html>

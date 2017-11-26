@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Echecs</title>
+    <style>
+    body
+        {
+            background-color: lightgray;
+        }
+    .conteneur
+{
+   display: flex;
+}
+.element
+{
+    margin: 8px;
+}
+
+
+.enligne
+{
+  display: flex;
+}
+
+.YC_fieldset
+{
+  display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px groove (internal value);
+	border-color : red;
+    min-width: 500px;
+}
+     .btn-info {  
+  margin-left : 20px;
+    padding: 10px;
+    min-width: 100px;
+  color: #fff;
+  background-color: rgb(222,70,104);
+  border-color: #46b8da;
+}
+.btn-info:focus,
+.btn-info.focus {
+  color: #fff;
+  background-color: rgb(155,76,139);
+  border-color: #1b6d85;
+}
+.btn-info:hover {
+  color: #fff;
+  background-color: rgb(155,76,139);
+  border-color: #269abc;
+}   
+    </style>
+</head>
+<body> 
+    <h2>Quelques éléments de stratégie pour débuter aux échecs</h2>
+    <div class="enligne">
+    <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">Début de partie = ouverture</legend> 
+          <div class="conteneur">
+          <div class="element">
+              <p>Quelques principes à respecter : </p>
+              <ol>
+                  <li>Objectif : Occuper et/ou contrôler les 4 cases centrales (d4-d5-e4-e5) </li>
+                  <li>Sortir les pièces dites légères en les dirigeant vers le centre : <br>
+              les pions centraux, les fous , les cavaliers </li>
+          <li>Mettre le roi à l'abri en roquant <br>
+              (préférer le petit roque plus solide et plus rapide à réaliser) </li>>
+                  <li>Ne pas casser le petit roque </li>
+                  <li>Ne pas jouer deux fois la même pièce sans y être obligé </li>
+                  <li>Ne pas exposer la dame inutilement </li>
+                  <li>Mettre en correspondance les deux tours (= fin de l'ouverture) </li>
+              </ol>
+              </div>
+          </div>
+          </fieldset>
+      <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">Et après ...conseils :</legend>    
+          <div class="conteneur">
+          <p class="element">
+          - Les tours ont autant d'influence au centre que sur les bords : <br>
+              ne pas exposer les tours, les placer sur les colonnes ouvertes ou qui vont probablement s'ouvrir <br>
+          - au contraire centraliser les cavaliers qui ont une influence plus grande <br>
+              au centre (8 cases) que sur les bords (4 cases voir 2) <br>
+          - Son adversaire : <br>
+             1) Regarder ce qu'il a joué !!! <br>
+             2) Se demander pour quelle(s) raison(s) il a joué ce coup <br>
+             3) Toujours penser qu'il va jouer le meilleur coup <br>
+                (et non le coup qu'on espère) <br>
+          - Je dois jouer : <br>
+             1) Quelle(s) pièce(s) sont attaquées ? <br>
+             2) Toujours trouver au minimum 2 raisons pour jouer son coup  <br>
+          
+          </p>
+          </div>
+          </fieldset>
+      </div>
+       <div class="enligne">
+    <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">A titre indicatif :</legend> 
+          <div class="conteneur">
+          <p class="element">
+            Pion        =   1 point <br>
+            Cavalier    =   3 points <br>
+            Fou         =   3 points <br>
+            Tour        =   5 points <br>
+            Dame        =  10 points <br>
+            Roi         =   infini <br><br>
+            (Pour les Maîtres et Grands Maîtres, un déficit de trois points équivaut à la perte de la partie<br>
+              ...Pour le niveau cp, ce n'est pas significatif)
+              </p>
+          </div>
+          </fieldset>
+      <fieldset class="YC_fieldset"> 
+        <legend class="YC_legend">Références</legend>    
+          <div class="conteneur">
+              <div class="element">
+              <p><a href="https://www.europe-echecs.com">Le site d'Europe Echecs</a></p> <br>
+              <p> Deux livres : (un peu anciens, peut-être y en a t-il de plus récents)</p>
+              <p><a href="https://www.amazon.fr/toi-jouer-Patrick-Gonneau/dp/2218064189">A toi de jouer</a></p> 
+              <p><a href="https://www.amazon.fr/toi-gagner-Patrick-Gonneau/dp/2218064170">A toi de gagner</a></p>   <br>
+              </div>
+          </div>
+          </fieldset>
+    </div> 
+   
+</body>
+</html>
+ 

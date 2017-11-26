@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+  </head>
+  <body>
+    <button id="action">Lancer la requête HTTP POST</button><br />
+
+      
+    <script src="../../../jquery.js"></script>
+    <script>
+        $(function() {
+          $('#action').click(function() {
+              $.post('traiteFormulaire.php', { nom: 'Pierre34', heure: '2pm', post: 'Un peu de texte récupéré dans un formulaire HTML et destiné à être posté dans un forum.' },
+                function(data) {
+                    alert(data);
+                    });
+
+            });  
+        });
+      </script>
+  </body>
+</html>

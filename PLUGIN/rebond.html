@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Utilisation du plugin rebond</title>
+  <style type="text/css">
+     img { position: absolute; }
+     #balle { top: 100px; left: 100px; }  
+  </style>
+</head>
+
+<body>
+  <img src="../images/question.png" id="balle">
+  <button id="action">Cliquez ici pour utiliser le plugin rebond</button>
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/rebond.js"></script> 
+  <script>
+    $(function() {
+      $('#action').click(function(){
+        $('img').rebond(10, 100);
+      });
+    });
+  </script>
+</body>
+</html>

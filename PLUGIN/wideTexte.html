@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Utilisation du plugin wideText</title>
+  <style type="text/css">
+    .wtext {
+	  white-space: nowrap;
+	  display: inline-block;
+	  }
+  </style>
+</head>
+
+<body>
+  <body>
+    <span id="texteAdaptatif">Ce texte s’adapte à la largeur de la page</span>
+  </body>
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/wideText.js"></script> 
+  <script>
+    $(function() {
+      $('#texteAdaptatif').wideText()
+    });
+  </script>
+</body>
+</html>

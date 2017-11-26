@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Menus déroulants</title>
+     <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body >
+<div class="btn-group"> 
+  <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Dompteurs</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-picture"></span> Zoos</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-screenshot"></span> Chasseurs</a></li>
+    <li class="divider"></li>
+    <li class="dropdown-submenu">
+      <a tabindex="-1" href="#"><span class="glyphicon glyphicon-list-alt"></span> Autres témoignages</a>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#"><span class="glyphicon glyphicon-eye-close"></span> Non classifiés</a></li>
+        <li class="dropdown-submenu">
+          <a href="#">Autres...</a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><span class=" glyphicon glyphicon-cutlery"></span> Restaurateurs</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-globe"></span> Voyageurs</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Commerçants</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Mécaniciens</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Onglets</title>
+     <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body >
+<ul class="nav nav-pills">
+    <li class="active"><a href="#accueil">Accueil</a></li>
+    <li><a href="#livres">Livres</a></li>
+    <li><a href="#temoignages">Témoignages</a></li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane active" id="accueil">Texte d'accueil</div>
+    <div class="tab-pane" id="livres">Tous les livres</div>
+    <div class="tab-pane" id="temoignages">Tous les témoignages</div>
+</div>
+<hr>
+<p id='actif'><strong>Onglet actif </strong>: <span></span></p>
+<p id='precedent'><strong>Onglet précédent </strong>: <span></span></p>
+<script src="../js/jquery.js"></script>
+ <script src="../js/bootstrap.min.js"></script>
+ <script>
+$(function(){
+  $('a')
+  .click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+  })
+  .on('shown.bs.tab', function (e) {
+    $('#actif span').html($(e.target).text());							///// onglet actif
+    $('#precedent span').html($(e.relatedTarget).text());				////  onglet actif précédent
+  });
+});
+    </script>
+
+
+</body>
+
+</html>

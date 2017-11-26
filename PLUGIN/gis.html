@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Plugin maison gis</title>
+  </head>
+  <body>
+     <p class="grasItaliqueSouligne">Ce texte devrait apparaître en gras, italique, souligné après avoir cliqué sur le bouton</p>
+      <p>Ce texte devrait rester inchangé</p>
+      <p class="grasItaliqueSouligne">Ce texte devrait apparaître en gras, italique, souligné après avoir cliqué sur le bouton</p>
+      <p>Ce texte devrait rester inchangé</p><br />
+      <button id="action">Cliquez ici pour utiliser le plugin gis</button>        
+
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/gis.js"></script> 
+    <script>
+      $(function() {
+        $('#action').click(function(){
+        $('.grasItaliqueSouligne').gis();
+      });
+      });
+    </script>
+  </body>
+</html>

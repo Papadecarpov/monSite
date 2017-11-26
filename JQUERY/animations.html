@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Animations</title>
+     <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body >
+      <p>Lorsque les méthodes show(), hide(), fadeIn(), fadeOut(), fadeTo(), slideDown(), slideUp() et slideToggle() sont utilisées sans argument,<br />leur durée d'exécution est par défaut égale à 400 millisecondes.<br />Si vous le souhaitez, il est possible de choisir une autre durée.<br />Vous pouvez utiliser la chaîne fast pour fixer la durée à 200 millisecondes ou la chaîne slow pour fixer la durée à 600 millisecondes.<br /> Mais vous pouvez également passer un nombre entier qui représente une durée en millisecondes.</p>
+      Deux modèles de progression sont disponibles pour vos animations : linear et swing(par défaut).<br />Si vous voulez utiliser d'autres modèles de progression, vous devrez utiliser un ou plusieurs plugins.<br />
+      Les méthodes fadeIn() et fadeOut() sont complémentaires des méthodes hide() et show().<br /> Elles agissent toutes deux progressivement sur l'opacité d'un élément.<br />
+<button id="affiche">Faire apparaître les lignes paires</button>
+<button id="cache">Faire disparaître les lignes paires</button><br />
+<table border>
+  <tr><td>a</td><td>b</td><td>c</td></tr>
+  <tr><td>d</td><td>e</td><td>f</td></tr>
+  <tr><td>g</td><td>h</td><td>i</td></tr>
+  <tr><td>j</td><td>k</td><td>l</td></tr>
+  <tr><td>m</td><td>n</td><td>o</td></tr>
+</table>
+
+  <button id="afficheimg">Faire apparaître les images</button>
+<button id="cacheimg">Faire disparaître les images</button><br />
+<img src="../images/ok.png">
+<img src="../images/ko.png">
+<img src="../images/question.png">
+
+<script src="../js/jquery.js"></script>
+<script>
+  $(function() {
+    $('tr:even').css('background','yellow');
+    $('td').css('width','200px');
+    $('td').css('text-align','center');
+    $('#affiche').click(function() {
+      $('tr:even').show('slow','linear');
+    } ); 
+    $('#cache').click(function() {
+      $('tr:even').hide(1000,'swing');
+    });
+// enchainement      
+    $('#afficheimg').click(function() {
+      $('img').first().show('slow', function showNextOne() {
+        $(this).next('img').show('slow', showNextOne);
+      });    
+    });
+    $('#cacheimg').click(function() {
+      $('img').first().hide('slow', function hideNextOne() {
+        $(this).next('img').hide('slow', hideNextOne);
+      });    
+    }); 
+      
+  });
+</script>
+
+
+</body>
+
+</html>

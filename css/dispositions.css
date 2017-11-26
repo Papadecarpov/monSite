@@ -1,0 +1,35 @@
+.db
+{
+    display: block;
+}
+
+.di
+{
+    display: inline;
+}
+.dib
+{
+    display: inline-block;
+}
+.df
+{
+    display: flex;
+}
+.if
+{
+    display: inline-flex;
+}
+
+.vat
+{
+    vertical-align: top;
+}
+
+.vab
+{
+    vertical-align: bottom;
+}
+.ma
+{
+    margin: auto;
+}

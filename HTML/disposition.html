@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Disposition 1</title>
+        <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+        <link href="../css/dispositions.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<section width='33%' heigh='10%'>
+    <p>Ligne 1</p>
+    <p>Ligne 2</p>
+    <p>Ligne 3</p>
+</section>
+<section width='33%' heigh='50%'>
+    <p>Ligne 1</p>
+</section>
+<section width='33%' heigh='40%'>
+    <p>Ligne 1</p>
+    <p>Ligne 2</p>
+    <p>Ligne 3</p>
+    <p>Ligne 4</p>
+    <p>Ligne 5</p>
+    <p>Ligne 6</p>
+</section>
+    <fieldset class="YC_fieldset">
+    <legend>Votre choix :</legend>    
+        <input type="checkbox" name="choix1" id="choix1" /><label for ="choix1">Display block</label><br />
+        <input type="checkbox" name="choix2" id="choix2" /><label for ="choix2">Display inline</label><br />
+        <input type="checkbox" name="choix3" id="choix3" /><label for ="choix3">Display inline-block</label><br />
+        <input type="checkbox" name="choix4" id="choix4" /><label for ="choix4">Display flex</label><br />
+        <input type="checkbox" name="choix8" id="choix8" /><label for ="choix8">Display inline-flex</label><br />
+        <input type="checkbox" name="choix5" id="choix5" /><label for ="choix5">Vertical-align Top</label><br />
+        <input type="checkbox" name="choix6" id="choix6" /><label for ="choix6">Vertical-align Bottom</label><br />
+        <input type="checkbox" name="choix7" id="choix7" /><label for ="choix7">Margin auto</label><br />
+    </fieldset>
+    <script src="../js/jquery.js"></script>
+<script>
+$(function() {
+  $('#choix1').change(function() {
+      if ($('#choix1:checked').val()) {$("section").addClass('db');};
+      if (!$('#choix1:checked').val()) {$("section").removeClass('db');};
+       });
+  $('#choix2').change(function() {
+      if ($('#choix2:checked').val()) {$("section").addClass('di');};
+      if (!$('#choix2:checked').val()) {$("section").removeClass('di');};
+       });
+  $('#choix3').change(function() {
+      if ($('#choix3:checked').val()) {$("section").addClass('dib');};
+      if (!$('#choix3:checked').val()) {$("section").removeClass('dib');};
+       });
+  $('#choix4').change(function() {
+      if ($('#choix4:checked').val()) {$("section").addClass('df');};
+      if (!$('#choix4:checked').val()) {$("section").removeClass('df');};
+       });
+  $('#choix5').change(function() {
+      if ($('#choix5:checked').val()) {$("section").addClass('vat');};
+      if (!$('#choix5:checked').val()) {$("section").removeClass('vat');};
+       });
+  $('#choix6').change(function() {
+      if ($('#choix6:checked').val()) {$("section").addClass('vab');};
+      if (!$('#choix6:checked').val()) {$("section").removeClass('vab');};
+  });
+    $('#choix7').change(function() {
+      if ($('#choix7:checked').val()) {$("section").addClass('ma');};
+      if (!$('#choix7:checked').val()) {$("section").removeClass('ma');};
+  });
+     $('#choix8').change(function() {
+      if ($('#choix8:checked').val()) {$("section").addClass('if');};
+      if (!$('#choix8:checked').val()) {$("section").removeClass('if');};
+  });
+});
+    
+    </script>
+</body>
+</html>
+ 

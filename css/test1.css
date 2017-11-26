@@ -1,0 +1,234 @@
+﻿body {
+  background-color: rgb(240,240,240);
+  font-family: HelveticaNeuethin,  Arial, Verdana, sans-serif;
+  color : rgb(86,76,76);
+  padding-top: 5px;
+}
+.invisible {
+    display: none;
+}
+.foot {
+  clear:both;
+  background-color: rgb(86,76,76);
+  font-family: HelveticaNeuethin,  Arial, Verdana, sans-serif;
+  color : rgb(240,240,240);
+  padding-top: 20px;
+    text-decoration: none;
+}
+
+.logo {
+    float: left;
+}
+.titre {
+    float: none;
+    text-align: center;
+}
+
+.topmenu {
+    clear:both;
+    float:right;
+    text-decoration: none;
+    
+}
+.topmenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(222,70,104);
+
+}
+.topmenu li {
+    padding: 15px;
+}
+
+.current {
+    background-color: rgb(155,76,139);
+}
+
+
+.topmenu a
+{
+color: #Fff;
+padding-bottom: 3px;
+text-decoration: none;
+}
+
+.topmenu  li:hover
+{
+ background-color: rgb(155,76,139);
+}
+
+.pagin {
+    margin: 10px;
+    color: midnightblue;
+    font-weight: bold;
+}
+.banner {
+    clear:both;
+    position: relative;
+    max-width: 1750px;
+    max-height: 600px;
+    min-height: 50px;
+    border: 1px solid rgb(233,138,147);
+}
+
+.submit {
+    margin-top: 10px;
+}
+
+label  {
+    padding-bottom: 10px;
+}
+table
+{
+    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+    margin-left : 20px;
+    margin-right: 20px;
+
+}
+
+tbody
+{
+    max-height: 400px;
+    display:block;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+tfooter {
+    border-top: 1px solid black;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+th:nth-child(1), td:nth-child(1){
+    width: 110px;
+}
+th:nth-child(2), td:nth-child(2){
+    width: 300px;
+}
+th:nth-child(5), td:nth-child(5){
+    width: 150px;
+}
+th:nth-child(6), td:nth-child(6){
+    width: 50px;
+}
+tr:hover {background-color: rgb(194,145,180);}
+td
+{
+    border: 1px solid black;
+  /*   margin-left: 10px;
+    margin-right: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+tr:nth-child(2n)
+/*Toutes les lignes paires*/
+{
+ background-color: rgb(225,178,196); 
+}
+
+.donnees
+{
+ background-color: rgb(225,178,196); 
+    font-size: 15px;
+}
+
+.saisie
+{ 
+ background-color: rgb(225,178,196); 
+ font-size: 15px;
+     
+}
+.conteneur1
+{
+   display: flex;
+}
+.element1
+{
+    margin: 10px;
+
+/*  flex: 1;    */
+}
+
+
+.conteneur2
+{
+   display: flex;
+/*flex-direction: row; ( par défaut) */   
+/*  flex-direction: row-reverse;  */
+/*  justify-content: space-around; */
+/*  justify-content: flex-start;   (par defaut) */
+/*  justify-content: flex-end; */
+  /*  justify-content: center; */
+ /* align-items: center; 
+  flex-wrap: wrap;  /* pour aller à la ligne si trop d'éléments */
+}
+.element2
+{
+    margin: 10px; 
+    line-height: 1.5;
+
+/*  flex: 1;    */
+}
+.YC_legend
+{
+    margin-left: 10px;
+}
+.YC_fieldset
+{
+  display: block;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px groove (internal value);
+	border-color : rgb(222,70,104);
+}
+.numtab
+{
+  float:right;
+}
+.btn-info {  
+  margin-left : 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    min-width: 100px;
+  color: #fff;
+  background-color: rgb(222,70,104);
+  border-color: #46b8da;
+}
+.btn-info:focus,
+.btn-info.focus {
+  color: #fff;
+  background-color: rgb(155,76,139);
+  border-color: #1b6d85;
+}
+.btn-info:hover {
+  color: #fff;
+  background-color: rgb(155,76,139);
+  border-color: #269abc;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+hr
+{
+border: 1px solid black;
+}

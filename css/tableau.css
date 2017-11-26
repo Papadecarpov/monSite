@@ -1,0 +1,34 @@
+
+.co
+{
+    border-collapse: collapse;
+}
+
+ th
+{
+   border: 1px solid blue;
+}
+ td
+{
+   border: 1px solid blue;
+}
+
+.vam
+{
+    vertical-align: middle;
+}
+
+.vab
+{
+    vertical-align: bottom;
+}
+
+.ab 
+{
+   border: 1px solid blue;
+}
+
+.sb 
+{
+   border: 0px;
+}

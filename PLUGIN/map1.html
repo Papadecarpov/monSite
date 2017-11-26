@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>MAP</title>
+    <link rel="Stylesheet" type="text/css" href="../css/mycss.css" />
+  </head>
+  <body>
+   <div id="map1" style="width: 800px; height: 600px; border: 1px solid #777; overflow: hidden;"></div>
+
+    <script src="../js/jquery.js"></script>
+      <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAA6cQIrMEc9zlaKBjWiPM5rxSjlBXfTSDcGsB79vzL90uiOHMpbBRa1FFoX2YfuQNFvFKxQtpz0ZCeuw&amp;hl=fr"></script>
+    <script src="../js/jquery.gmap.min.js"></script>
+    <script>
+      $(function() {
+        $(function() {
+            $("#map1").gMap({ markers: [{ 
+                latitude: -21.001461,
+                longitude: 55.287265,
+                html: "Saint Paul",
+                popup: true }],
+                            maptype: 'TERRAIN',
+                            zoom: 12 });
+            }); 
+      });
+    </script>
+  </body>
+</html>

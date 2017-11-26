@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Mon Site</title>
+     <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <fieldset>
+    <legend> Météo</legend>
+        <div>
+          Météo à <select class='meteo' name="lieu" id="lieu">
+              <option value="Paris">Paris</option>
+              <option value="Bordeaux">Bordeaux</option>
+              <option value="Lyon">Lyon</option>
+              <option value="Brest">Brest</option>
+              <option value="Marseille">Marseille</option>
+              <option value="Nice">Nice</option>
+              <option value="LaRochelle">La Rochelle</option>
+              <option value="Mamers">Mamers</option>
+          </select>
+      <p class='meteo' id="meteo"></p>
+    </div>
+    </fieldset>
+    <p><a href="http://www.wunderground.com/weather/api">Site de météo</a></p>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/ajax.js"></script>
+    <script> 
+     $(function () {
+         meteo();
+         function meteo() {  
+        var adresseMeteo = "http://api.wunderground.com/api/50a65432f17cf542/conditions/q/France/" + $("#lieu").val() + ".json";
+        ajaxGet(adresseMeteo, function (reponse) {
+            var meteo = JSON.parse(reponse);
+            // Récupération de certains résultats
+            var temperature = meteo.current_observation.temp_c;
+            var humidite = meteo.current_observation.relative_humidity;
+            var imageUrl = meteo.current_observation.icon_url;
+            var etat = meteo.current_observation.display_location.state_name;
+            // Affichage des résultats
+            var labelElt = document.createElement("div");
+            labelElt.textContent = '(' + etat + ')';
+            labelElt.setAttribute('class','meteo');
+            var conditionsElt = document.createElement("div");
+            conditionsElt.setAttribute('class','meteo');
+            conditionsElt.textContent = "Il fait actuellement " + temperature +
+                "°C et l'humidité est de " + humidite;
+            var imageElt = document.createElement("img");
+            imageElt.setAttribute('class','meteo');
+            imageElt.src = imageUrl;
+            //var meteoElt = document.getElementById("meteo");
+            $("#meteo").prepend(labelElt);
+            $("#meteo").append(conditionsElt);
+            $("#meteo").append(imageElt);
+            });
+        }
+             $("#lieu").on('change', function () {
+             $("div").remove('.meteo');
+             $("img").remove('.meteo');
+             meteo();
+         });
+});
+    </script>
+</body>
+</html>

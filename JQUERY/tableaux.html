@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tableaux</title>
+     <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ <span id="un"></span><br /><br />
+<span id="deux"></span><br /><br />
+<p>Recherche multiple $.grep</p>
+<button id="filtre1">Après le cinquième</button>
+<button id="filtre2">Différent de Mathis, Hugo et Yanis</button>
+<button id="filtre3">Avant le cinquième</button><br>
+<p>Copie $.map</p>
+        <button id="copie1">Prénoms en majuscules</button>
+        <button id="copie2">Index et prénoms en minuscules</button>
+    <p>Recherche simple $.inArray</p>
+<button id="rech1">Emma</button>
+<button id="rech2">Léa</button>
+<button id="rech3">Luca après la position 5</button>
+      <button id="rech2">Alfred</button><br>
+      
+       <p>Fusion de tableaux $.merge</p>
+        <button id="merge">Merge</button>
+      <script src="../js/jquery.js"></script>
+    <script>
+        $(function() {
+           var tableau = ['Luca', 'Emma', 'Mathis', 'Jade', 'Léa', 'Enzo', 'Chloé', 'Nathan', 'Manon', 'Noah', 'Sarah ', 'Louis', 'Luna', 'Kylian', 'Clara', 'Ethan', 'Camille', 'Hugo', 'Lylou', 'Théo', 'Zoé', 'Yanis', 'Maélys'];
+           var tableau2;
+           $('#un').text('Données originales : ' + tableau.join(', '));
+            
+           $('#filtre1').click(function() {
+                tableau2 = $.grep(tableau, function(el,ind) {
+                    return (ind > 4);
+                    });   
+                $('#deux').text('Après le cinquième : ' + tableau2.join(', '));
+                });
+            
+           $('#filtre2').click(function() {
+                tableau2 = $.grep(tableau, function(el,ind) {
+                    return (el != 'Mathis' && el != 'Hugo' && el !='Yanis');
+                    });
+                $('#deux').text('Différent de Mathis, Hugo et Yanis : ' + tableau2.join(', '));
+                });
+            
+           $('#filtre3').click(function() {
+                tableau2 = $.grep(tableau, function(el,ind) {
+                    return (ind > 4);
+                    }, true);
+                $('#deux').text('Avant le cinquième : ' + tableau2.join(', '));
+                });
+           
+           $('#copie1').click(function() {
+	           tableau2 = $.map(tableau, function(el,ind) {
+		          return (el.toUpperCase());
+	               });
+	           $('#deux').text('Prénoms en majuscules : ' + tableau2.join(', '));
+	           });
+	       $('#copie2').click(function() {
+	           tableau2 = $.map(tableau, function(el,ind) {
+		          return (ind + ' : ' + el.toLowerCase());
+	               });
+	           $('#deux').text('Index et prénoms en minuscules : ' + tableau2.join(', '));
+	           });
+        
+            $('#rech1').click(function() {
+	           $('#deux').text('résultat de la recherche simple : ' + $.inArray('Emma',tableau));
+	           });
+            $('#rech2').click(function() {
+	           $('#deux').text('résultat de la recherche simple : ' + $.inArray('Léa',tableau));
+	           });
+            $('#rech3').click(function() {
+	           $('#deux').text('résultat de la recherche simple : ' + $.inArray('Luca',tableau,5));
+	           });
+            $('#rech4').click(function() {
+	           $('#deux').text('résultat de la recherche simple : ' + $.inArray('Alfred',tableau));
+	           });
+            $('#merge').click(function() {
+                var tableau3 = ['Luca', 'Emma', 'Mathis', 'Jade', 'Léa', 'Enzo', 'Chloé'];
+                var tableau4 = ['Clara', 'Ethan', 'Camille', 'Hugo', 'Lylou', 'Théo'];
+                alert('Tableau3 = '+tableau3.join(', '));
+                alert('Tableau4 = '+tableau4.join(', '));
+                $.merge(tableau3, tableau4); 
+                alert('Tableau3 après merge = '+tableau3.join(', '));
+                });
+            });
+      </script>
+</body>
+</html>

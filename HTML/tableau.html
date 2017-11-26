@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tableau</title>
+        <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
+        <link href="../css/tableau.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table class='.avecb'>
+<caption>Passagers du vol 377</caption>
+<thead> <!-- En-tête du tableau -->
+<tr>
+<th>Nom</th>
+<th>Âge</th>
+<th>Pays</th>
+</tr>
+</thead>
+<tfoot> <!-- Pied de tableau -->
+<tr>
+<th>Nom</th>
+<th>Âge</th>
+<th>Pays</th>
+</tr>
+</tfoot>
+<tbody> <!-- Corps du tableau -->
+<tr>
+<td>Carmen</td>
+<td>33 ans</td>
+<td>Espagne</td>
+</tr>
+<tr>
+<td>Michelle</td>
+<td>26 ans</td>
+<td>États-Unis</td>
+</tr>
+<tr>
+<td>François</td>
+<td>43 ans</td>
+<td>France</td>
+</tr>
+<tr>
+<td>Martine</td>
+<td>34 ans</td>
+<td>France</td>
+</tr>
+<tr>
+<td>Jonathan</td>
+<td>13 ans</td>
+<td>Australie</td>
+</tr>
+<tr>
+<td>Xu</td>
+<td>19 ans</td>
+<td>Chine</td>
+</tr>
+    <tr>
+        <td>Lucky Luke</td>
+        <td colspan="2">Sans age ni origine !</td>
+    </tr>
+</tbody>
+</table>
+<br />
+<br />    
+<table>
+<tr>
+<th>Titre du film</th>
+<td>Massacre à la tronçonneuse</td>
+<td>Les bisounours font du ski</td>
+<td>Lucky Luke, seul contre tous</td>
+</tr>
+<tr>
+<th>Pour enfants ?</th>
+<td>Non, trop violent</td>
+<td>Oui, adapté</td>
+<td rowspan="2">Pour toute la famille !</td>
+</tr>
+<tr>
+<th>Pour adolescents ?</th>
+<td>Oui</td>
+<td>Pas assez violent...</td>
+</tr>
+    </table>
+    <br />
+<br /> 
+    <fieldset class="YC_fieldset">
+    <legend>Votre choix :</legend>    
+        <input type="checkbox" name="choix1" id="choix1" /><label for ="choix1">Enlever les bordures</label><br />
+        <input type="checkbox" name="choix2" id="choix2" /><label for ="choix2">Coller les bordures</label><br />
+        <input type="checkbox" name="choix3" id="choix3" /><label for ="choix3">Alignement texte centré</label><br />
+        <input type="checkbox" name="choix4" id="choix4" /><label for ="choix4">Alignement texte bas</label><br />
+    </fieldset>
+    <script src="../js/jquery.js"></script>
+<script>
+$(function() {
+  $('#choix1').change(function() {
+      if ($('#choix1:checked').val()) {$("th,td").addClass('ab');};
+      if (!$('#choix1:checked').val()) {$("th, td").removeClass('ab');};
+      if ($('#choix1:checked').val()) {$("th,td").addClass('sb');};
+      if (!$('#choix1:checked').val()) {$("th, td").removeClass('sb');};
+       });
+   $('#choix2').change(function() {    
+    if ($('#choix2:checked').val()) {$("table").addClass('co');};
+      if (!$('#choix2:checked').val()) {$("table").removeClass('co');};
+       });
+    $('#choix3').change(function() {    
+    if ($('#choix3:checked').val()) {$("td").addClass('vam');};
+      if (!$('#choix3:checked').val()) {$("td").removeClass('vam');};
+       });
+     $('#choix4').change(function() {    
+    if ($('#choix4:checked').val()) {$("td").addClass('vab');};
+      if (!$('#choix4:checked').val()) {$("td").removeClass('vab');};
+       });
+});
+    
+    </script>
+</body>
+</html>
+ 
