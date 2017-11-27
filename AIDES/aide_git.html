@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<title>Liens</title>
+	<title>Aides Git/GitHub</title>
      <link href="../css/mycss.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
       <fieldset class="YC_fieldset" style="display:inline-block;vertical-align:top"> 
-          <legend>Aide sur Git</legend>
+          <legend>Aide sur Git : généralités</legend>
           <p>Définir son nom et email :<br>
                 <i>git config --global user.name "Votre nom ou pseudo"</i><br>
                 <i>git config --global user.email "votre@email.com"</i></p>
@@ -27,6 +27,45 @@
           <i>git checkout SHADuCommit</i></p>
           <p>Pour se positionner sur le dernier commit :<br>
           <i>git checkout master</i></p>
+          <p>Pour déterminer l'état des fichiers de l'application :<br>
+          <i>git status</i></p>
+      </fieldset>
+     <fieldset class="YC_fieldset" style="display:inline-block;vertical-align:top"> 
+          <legend>Aide sur Git : les branches</legend>
+          <p>Pour afficher les branches :<br>
+          <i>git branch</i></p>
+          <p>Pour créer une nouvelle branche :<br>
+          <i>git branch nouvelle-branche</i></p>
+          <p>Pour se positionner sur une branche :<br>
+          <i>git checkout ma-branch</i></p>
+          <p>Les deux dernières opérations en une seule :<br>
+          <i>git checkout -b nouvelle-branche</i></p>
+          <p>Ajouter dans une branche A les mises à jour effectuées dans une branche B :<br>
+          <i>git checkout branche-A</i> puis <i>git merge branche-B</i></p>
+          <p>Règlement d'un conflit :<br>
+             - Modifier la branche confictuelle<br>
+             - <i>Git commit</i><br>
+             - <i>:x</i> pour sauvegarder le message tel quel </p>
+          <p>Pour supprimer une branche :<br>
+          <i>git branch -d ma-branche</i></p>
+      </fieldset>
+    <fieldset class="YC_fieldset" style="display:inline-block;vertical-align:top"> 
+          <legend>Aide sur Git : commandes diverses</legend>
+          <p>Qui a modifier un fichier du projet :<br>
+          <i>git blame nomdufichier.extension</i> puis <i>git show débutdusha</i></p>
+          <p>Pour ignorer certains fichiers dans Git, utiliser le fichier .gitignore<br>
+          <p>Dans ce fichier, lister les fichiers de configuration, ou fichies contenant des mots de passe :<br>
+          <i>monrepertoire/motdepasses.txt</i><br><i>config/application.yml</i></p>
+          <p>Les deux dernières opérations en une seule :<br>
+          <i>git checkout -b nouvelle-branche</i></p>
+          <p>Ajouter dans une branche A les mises à jour effectuées dans une branche B :<br>
+          <i>git checkout branche-A</i> puis <i>git merge branche-B</i></p>
+          <p>Règlement d'un conflit :<br>
+             - Modifier la branche confictuelle<br>
+             - <i>Git commit</i><br>
+             - <i>:x</i> pour sauvegarder le message tel quel </p>
+          <p>Pour éviter de faire un commit superflu, mettre de coté les modifications par :<br>
+              <i>git stach</i> puis les reprendre par <i>git stash pop</i></p>
       </fieldset>
     <fieldset class="YC_fieldset" style="display:inline-block;vertical-align:top"> 
           <legend>Aide sur GitHub</legend>
